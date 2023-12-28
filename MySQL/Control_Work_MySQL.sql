@@ -148,7 +148,7 @@ select * from donkeys;
 -- 11. Создать новую таблицу “молодые животные” в которую попадут все животные старше 1 года, 
 -- но младше 3 лет и в отдельном столбце с точностью до месяца подсчитать возраст животных в новой таблице
 
-create temporary table tmp
+create table tmp
 select *, 'Кошка/Кот' as types from cats
 union 
 select *, 'Собака' as types from dogs
