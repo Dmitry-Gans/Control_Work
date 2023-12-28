@@ -23,7 +23,7 @@ create table home_animals
 	id int auto_increment primary key,
     type_name varchar(20),
     class_id int,
-    foreign key (class_id) references animals_class (id) on delete cascade on update cascade
+    foreign key (class_id) references animals_class (id)
 );
 
 insert into home_animals (type_name, class_id)
@@ -36,7 +36,7 @@ create table packed_animals
 	id int auto_increment primary key,
     type_name varchar(20),
     class_id int,
-    foreign key (class_id) references animals_class (id) on delete cascade on update cascade
+    foreign key (class_id) references animals_class (id)
 );
 
 insert into packed_animals (type_name, class_id)
@@ -53,7 +53,7 @@ create table cats
     birthday date,
     commands varchar(30),
     type_id int,
-    foreign key (type_id) references home_animals (id) on delete cascade on update cascade
+    foreign key (type_id) references home_animals (id)
 );
 
 insert into cats (name, birthday, commands, type_id)
@@ -68,7 +68,7 @@ create table dogs
     birthday date,
     commands varchar(30),
     type_id int,
-    foreign key (type_id) references home_animals (id) on delete cascade on update cascade
+    foreign key (type_id) references home_animals (id)
 );
 
 insert into dogs (name, birthday, commands, type_id)
@@ -83,7 +83,7 @@ create table hamsters
     birthday date,
     commands varchar(30),
     type_id int,
-    foreign key (type_id) references home_animals (id) on delete cascade on update cascade
+    foreign key (type_id) references home_animals (id)
 );
 
 insert into hamsters (name, birthday, commands, type_id)
@@ -98,7 +98,7 @@ create table horses
     birthday date,
     commands varchar(30),
     type_id int,
-    foreign key (type_id) references home_animals (id) on delete cascade on update cascade
+    foreign key (type_id) references home_animals (id)
 );
 
 insert into horses (name, birthday, commands, type_id)
@@ -113,7 +113,7 @@ create table donkeys
     birthday date,
     commands varchar(30),
     type_id int,
-    foreign key (type_id) references home_animals (id) on delete cascade on update cascade
+    foreign key (type_id) references home_animals (id)
 );
 
 insert into donkeys (name, birthday, commands, type_id)
@@ -128,7 +128,7 @@ create table camels
     birthday date,
     commands varchar(30),
     type_id int,
-    foreign key (type_id) references home_animals (id) on delete cascade on update cascade
+    foreign key (type_id) references home_animals (id)
 );
 
 insert into camels (name, birthday, commands, type_id)
